@@ -1,0 +1,177 @@
+-------------------------------------
+|             Employee              |
+-------------------------------------
+| - employeeId: int                 |
+| - Name: string               |            |
+| - departmentId: int               |
+| - position: string                |
+| - hireDate: date                  |
+| - salaryStructureId: int          |
+| - status: string                  |
+| - promoted: bool                  |
+| - createdAt: datetime             |
+| - updatedAt: datetime             |
+| - createdBy: string               |
+| - updatedBy: string               |
+-------------------------------------
+| + getEmployeeId(): int            |
+| + getFirstName(): string          |
+| + getLastName(): string           |
+| + getDepartmentId(): int          |
+| + getPosition(): string           |
+| + getHireDate(): date             |
+| + getSalaryStructureId(): int     |
+| + getStatus(): string             |
+| + isPromoted(): bool              |
+| + getCreatedAt(): datetime        |
+| + getUpdatedAt(): datetime        |
+| + getCreatedBy(): string          |
+| + getUpdatedBy(): string          |
+-------------------------------------
+| + getDepartment(): Department     |
+| + getSalaryStructure(): SalaryStructure |
+| + getFixedSalaryDetails(): List<FixedSalaryDetails> |
+| + getAllowances(): List<Allowance> |
+| + getDeductions(): List<Deduction> |
+| + getLeaveApplications(): List<EmployeeLeaveApplication> |
+-------------------------------------
+
+-------------------------------------
+|           Department              |
+-------------------------------------
+| - departmentId: int               |
+| - departmentName: string          |
+-------------------------------------
+| + getDepartmentId(): int          |
+| + getDepartmentName(): string     |
+-------------------------------------
+
+
+-------------------------------------
+|         SalaryStructure           |
+-------------------------------------
+| - structureId: int                |
+| - structureName: string           |
+| - description: string             |
+-------------------------------------
+| + getStructureId(): int           |
+| + getStructureName(): string      |
+| + getDescription(): string        |
+-------------------------------------
+
+
+-------------------------------------
+|        FixedSalaryDetails         |
+-------------------------------------
+| - detailId: int                   |
+| - employeeId: int                 |
+| - salary: decimal                 |
+-------------------------------------
+| + getDetailId(): int              |
+| + getEmployeeId(): int            |
+| + getSalary(): decimal            |
+-------------------------------------
+
+
+-------------------------------------
+|            Allowance              |
+-------------------------------------
+| - allowanceId: int                |
+| - employeeId: int                 |
+| - allowanceName: string           |
+| - amount: decimal                 |
+-------------------------------------
+| + getAllowanceId(): int           |
+| + getEmployeeId(): int            |
+| + getAllowanceName(): string      |
+| + getAmount(): decimal            |
+-------------------------------------
+
+
+-------------------------------------
+|           Deduction               |
+-------------------------------------
+| - deductionId: int                |
+| - employeeId: int                 |
+| - deductionName: string           |
+| - amount: decimal                 |
+-------------------------------------
+| + getDeductionId(): int           |
+| + getEmployeeId(): int            |
+| + getDeductionName(): string      |
+| + getAmount(): decimal            |
+-------------------------------------
+
+
+-------------------------------------
+|            LeaveType              |
+-------------------------------------
+| - id: int                         |
+| - code: int                       |
+| - name: string                    |
+| - isActive: bool                  |
+| - createdAt: datetime             |
+| - createdBy: string               |
+| - updatedAt: datetime             |
+| - updatedBy: string               |
+-------------------------------------
+| + getId(): int                    |
+| + getCode(): int                  |
+| + getName(): string               |
+| + isActive(): bool                |
+| + getCreatedAt(): datetime        |
+| + getCreatedBy(): string          |
+| + getUpdatedAt(): datetime        |
+| + getUpdatedBy(): string          |
+-------------------------------------
+
+
+-------------------------------------
+|    EmployeeLeaveApplication       |
+-------------------------------------
+| - employeeLeaveId: int            |
+| - employeeId: int                 |
+| - leaveTypeId: int                |
+| - leaveCount: int                 |
+-------------------------------------
+| + getEmployeeLeaveId(): int       |
+| + getEmployeeId(): int            |
+| + getLeaveTypeId(): int           |
+| + getLeaveCount(): int            |
+-------------------------------------
+
+
+-------------------------------------
+|       AllowanceTemplate           |
+-------------------------------------
+| - allowanceId: int                |
+| - name: string                    |
+-------------------------------------
+| + getAllowanceId(): int           |
+| + getName(): string               |
+-------------------------------------
+
+
+-------------------------------------
+|      DeductionTemplate            |
+-------------------------------------
+| - id: int                         |
+| - deductionType: string           |
+| - percentage: decimal             |
+-------------------------------------
+| + getId(): int                    |
+| + getDeductionType(): string      |
+| + getPercentage(): decimal        |
+-------------------------------------
+-------------------------------------
+
+
+
+Employee - Department:
+Employee - SalaryStructure:
+Employee - FixedSalaryDetails:
+Employee - Allowance:
+Employee - Deduction:
+LeaveType - EmployeeLeaveApplication:
+Employee - EmployeeLeaveApplication:
+
